@@ -3,3 +3,6 @@
 
 # connect bash script
 connect
+
+# npm
+/node_modules
