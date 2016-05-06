@@ -1,0 +1,11 @@
+html, body{
+        background-color:#262626;
+}
+.headshot{
+    margin-top: calc(50vh - 125px);
+}
+.headshot img{
+    height:250px;
+    border-radius:50%;
+    background-color:orange;
+}
