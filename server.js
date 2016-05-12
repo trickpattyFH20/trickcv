@@ -27,12 +27,12 @@ http.createServer(function (request, response) {
             break;
     }
 
-    if(extname.indexOf('?v=') != -1){
+    if(filePath.indexOf('?v=') != -1){
         console.log('matches regex')
-        if(extname.indexOf('.css') != -1){
+        if(filePath.indexOf('.css') != -1){
             contentType = 'text/css';
         }
-        if(extname.indexOf('.js') != -1){
+        if(filePath.indexOf('.js') != -1){
             contentType = 'text/javascript';
         }
         var end = filePath.indexOf("?");
