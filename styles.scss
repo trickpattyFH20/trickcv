@@ -47,7 +47,7 @@ h4{
     height:80px;
     font-size:80px;
     color:#fefefe;
-    margin-top:50px;
+    margin-top:15px;
 }
 .fa-h1 a{
     color:#fefefe;
@@ -61,7 +61,7 @@ h4{
 
 }
 
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : 767px) {
     .fa-h1{
         height:50px;
         font-size:50px;
@@ -69,18 +69,21 @@ h4{
 
     .row:nth-child(1){
         margin-top:50px;
-        .col-sm-6:nth-child(2){
-            margin-top:30px;
+        .col-xs-12:nth-child(3){
+            margin-top:15px;
         }
     }
     .row:nth-child(2){
-        margin-top:30px;
+        margin-top:15px;
     }
 }
 
 @media only screen and (min-width : 768px) {
     .row:nth-child(2){
-        margin-top:calc(50vh - 250px);
+        margin-top:calc(50vh - 275px);
+    }
+    .fa-h1{
+        margin-top:50px;
     }
 }
 
@@ -96,8 +99,9 @@ h4{
   background-color: #FEFEFE;
   border-color: #FEFEFE;
   height:60px;
-  font-size:30px;
+  font-size:18px;
   font-weight:bold;
+  text-transform: uppercase;
 }
 
 .btn-white:hover,
