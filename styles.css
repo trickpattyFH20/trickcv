@@ -3,6 +3,14 @@ html, body {
   background-size: 100%, auto;
   background-repeat: no-repeat; }
 
+h1, h4 {
+  color: #fff; }
+
+h4 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 16px; }
+
 .container-fluid {
   padding-top: 15px;
   padding-bottom: 100px;
@@ -13,14 +21,14 @@ html, body {
 .container-fluid:before {
   content: ' ';
   display: block;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   z-index: 0;
   opacity: 0.2;
-  background-image: url("./images/patchmein.png");
+  background-image: url("./images/patchmeinblur.png");
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: 100%, auto; }
@@ -34,15 +42,77 @@ html, body {
   background-color: #fefefe; }
 
 .fa-h1 {
-  height: 100px;
-  font-size: 100px;
+  height: 80px;
+  font-size: 80px;
   color: #fefefe;
-  margin-top: 15px; }
+  margin-top: 50px; }
 
 .fa-h1 a {
   color: #fefefe; }
+
+.row:nth-child(1) {
+  margin-top: 50px; }
+
+@media only screen and (max-width: 768px) {
+  .fa-h1 {
+    height: 50px;
+    font-size: 50px; }
+  .row:nth-child(1) {
+    margin-top: 50px; }
+    .row:nth-child(1) .col-sm-6:nth-child(2) {
+      margin-top: 30px; }
+  .row:nth-child(2) {
+    margin-top: 30px; } }
+
+@media only screen and (min-width: 768px) {
+  .row:nth-child(2) {
+    margin-top: calc(50vh - 250px); } }
 
 @media only screen and (min-width: 992px) {
   /*.fa-h1{
         margin-top:75px;
     }*/ }
+
+.btn-white {
+  color: #000000;
+  background-color: #FEFEFE;
+  border-color: #FEFEFE;
+  height: 60px;
+  font-size: 30px;
+  font-weight: bold; }
+
+.btn-white:hover,
+.btn-white:focus,
+.btn-white:active,
+.btn-white.active,
+.open .dropdown-toggle.btn-white {
+  color: #000000;
+  background-color: #EDEDED;
+  border-color: #FEFEFE; }
+
+.btn-white:active,
+.btn-white.active,
+.open .dropdown-toggle.btn-white {
+  background-image: none; }
+
+.btn-white.disabled,
+.btn-white[disabled],
+fieldset[disabled] .btn-white,
+.btn-white.disabled:hover,
+.btn-white[disabled]:hover,
+fieldset[disabled] .btn-white:hover,
+.btn-white.disabled:focus,
+.btn-white[disabled]:focus,
+fieldset[disabled] .btn-white:focus,
+.btn-white.disabled:active,
+.btn-white[disabled]:active,
+fieldset[disabled] .btn-white:active,
+.btn-white.disabled.active,
+.btn-white[disabled].active,
+fieldset[disabled] .btn-white.active {
+  background-color: #FEFEFE;
+  border-color: #FEFEFE; }
+
+.btn-white .badge {
+  color: #FEFEFE;
+  background-color: #000000; }
