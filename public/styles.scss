@@ -17,12 +17,13 @@ h4{
     position: relative;
     background: #000;
     overflow: hidden;
+    height:100%;
 }
 
 .container-fluid:before {
+    position:absolute;
     content: ' ';
     display: block;
-    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
@@ -30,6 +31,7 @@ h4{
     z-index: 0;
     opacity: 0.2;
     background-image: url('./images/patchmeinblur.png');
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: (100%, auto);
@@ -142,4 +144,11 @@ fieldset[disabled] .btn-white.active {
 .btn-white .badge {
   color: #FEFEFE;
   background-color: #000000;
+}
+//about component
+.player-container{
+    color:#fff;
+    position:fixed;
+    bottom:0;
+    right:0;
 }
