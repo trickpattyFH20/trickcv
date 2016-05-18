@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES, RouteConfig, Router } from '@angular/router-deprecated';
 import { HomeComponent } from './home/home.component';
-import { MusicComponent } from './music/music.component';
+import { AboutComponent } from './about/about.component';
 
 @Component({
   selector: 'my-app',
@@ -12,7 +12,7 @@ import { MusicComponent } from './music/music.component';
 
 @RouteConfig([
   { path: '/home', component: HomeComponent, name: 'Home' },
-  { path: '/music', component: MusicComponent, name: 'Music' },
+  { path: '/about', component: AboutComponent, name: 'About' },
   { path: '/**', redirectTo: ['Home'] }
 ])
 

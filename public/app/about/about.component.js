@@ -1,4 +1,4 @@
-System.register(['@angular/core'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/router-deprecated'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,22 +10,25 @@ System.register(['@angular/core'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
-    var MusicComponent;
+    var core_1, router_deprecated_1;
+    var AboutComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (router_deprecated_1_1) {
+                router_deprecated_1 = router_deprecated_1_1;
             }],
         execute: function() {
-            MusicComponent = (function () {
-                function MusicComponent() {
+            AboutComponent = (function () {
+                function AboutComponent() {
                     this.muted = true;
                 }
-                MusicComponent.prototype.sendEmail = function () {
+                AboutComponent.prototype.sendEmail = function () {
                     window.location.href = "mailto:patricktlawler@gmail.com";
                 };
-                MusicComponent.prototype.toggleMute = function () {
+                AboutComponent.prototype.toggleMute = function () {
                     if (this.player.isMuted()) {
                         this.muted = false;
                         this.player.unMute();
@@ -45,7 +48,7 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                 //     }
                 //   });
                 // }
-                MusicComponent.prototype.ngOnInit = function () {
+                AboutComponent.prototype.ngOnInit = function () {
                     var tag = document.createElement('script');
                     tag.src = "https://www.youtube.com/iframe_api";
                     var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -55,9 +58,10 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                     var player;
                     this.player = player = new YT.Player('playertwo', {
                         height: 'auto',
-                        width: '320',
-                        videoId: '4u0EYOQDPag',
-                        playerVars: { 'controls': 1 },
+                        width: '300',
+                        playerVars: {
+                            'controls': 1
+                        },
                         events: {
                             'onReady': onPlayerReady,
                             'onStateChange': onPlayerStateChange
@@ -65,7 +69,8 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                     });
                     // 4. The API will call this function when the video player is ready.
                     function onPlayerReady(event) {
-                        event.target.playVideo();
+                        //event.target.playVideo();
+                        player.loadPlaylist({ 'list': 'FLzULymNZwMkZqaaNIFcp3fQ' });
                         player.mute();
                     }
                     // 5. The API calls this function when the player's state changes.
@@ -81,15 +86,16 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                         player.stopVideo();
                     }
                 };
-                MusicComponent = __decorate([
+                AboutComponent = __decorate([
                     core_1.Component({
-                        templateUrl: 'app/music/music.component.html',
+                        templateUrl: 'app/about/about.component.html',
+                        directives: [router_deprecated_1.ROUTER_DIRECTIVES]
                     }), 
                     __metadata('design:paramtypes', [])
-                ], MusicComponent);
-                return MusicComponent;
+                ], AboutComponent);
+                return AboutComponent;
             }());
-            exports_1("MusicComponent", MusicComponent);
+            exports_1("AboutComponent", AboutComponent);
         }
     }
 });

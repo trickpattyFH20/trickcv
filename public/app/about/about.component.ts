@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { ROUTER_DIRECTIVES, Router } from '@angular/router-deprecated';
 
 @Component({
-  templateUrl: 'app/music/music.component.html',
+  templateUrl: 'app/about/about.component.html',
+  directives: [ ROUTER_DIRECTIVES ]
 })
 
-export class MusicComponent implements OnInit {
+export class AboutComponent implements OnInit {
 
     public sendEmail(){
         window.location.href = "mailto:patricktlawler@gmail.com";
@@ -48,9 +50,10 @@ export class MusicComponent implements OnInit {
       let player: any;
       this.player = player = new YT.Player('playertwo', {
         height: 'auto',
-        width: '320',
-        videoId: '4u0EYOQDPag',
-        playerVars: { 'controls': 1 },
+        width: '300',
+        playerVars: {
+            'controls': 1
+         },
         events: {
           'onReady': onPlayerReady,
           'onStateChange': onPlayerStateChange
@@ -59,7 +62,8 @@ export class MusicComponent implements OnInit {
 
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event: any) {
-        event.target.playVideo();
+        //event.target.playVideo();
+        player.loadPlaylist({'list':'FLzULymNZwMkZqaaNIFcp3fQ'})
         player.mute()
       }
 
