@@ -110,6 +110,9 @@ fieldset[disabled] .btn-white.active {
   color: #FEFEFE;
   background-color: #000000; }
 
+.about > .row {
+  margin-top: 0px !important; }
+
 .about .panel {
   padding: 15px;
   color: #fefefe;

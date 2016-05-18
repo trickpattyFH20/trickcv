@@ -129,6 +129,9 @@ fieldset[disabled] .btn-white.active {
 }
 
 .about{
+    & > .row{
+        margin-top:0px!important;
+    }
     .panel{
         padding:15px;
         //position:relative;
