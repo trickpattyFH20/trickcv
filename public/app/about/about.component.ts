@@ -74,11 +74,18 @@ export class AboutComponent implements OnInit {
             any: function() { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
         };
 
+        alert(isMobile.any());
+
         if(isMobile.any() != null){
-            player.cuePlaylist({'list':'FLzULymNZwMkZqaaNIFcp3fQ'})
+            alert('1')
+            //player.cuePlaylist({'list':'FLzULymNZwMkZqaaNIFcp3fQ'})
         }else{
-            player.loadPlaylist({'list':'FLzULymNZwMkZqaaNIFcp3fQ'})
+            alert('2')
+            //player.loadPlaylist({'list':'FLzULymNZwMkZqaaNIFcp3fQ'})
         }
+
+        player.cuePlaylist({'list':'FLzULymNZwMkZqaaNIFcp3fQ'})
+
         player.mute()
       }
 

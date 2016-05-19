@@ -79,12 +79,14 @@ System.register(['@angular/core', '@angular/router-deprecated'], function(export
                             Windows: function () { return navigator.userAgent.match(/IEMobile/i); },
                             any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
                         };
+                        alert(isMobile.any());
                         if (isMobile.any() != null) {
-                            player.cuePlaylist({ 'list': 'FLzULymNZwMkZqaaNIFcp3fQ' });
+                            alert('1');
                         }
                         else {
-                            player.loadPlaylist({ 'list': 'FLzULymNZwMkZqaaNIFcp3fQ' });
+                            alert('2');
                         }
+                        player.cuePlaylist({ 'list': 'FLzULymNZwMkZqaaNIFcp3fQ' });
                         player.mute();
                     }
                     // 5. The API calls this function when the player's state changes.
