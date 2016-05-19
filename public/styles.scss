@@ -1,5 +1,5 @@
 html, body{
-    background-color:#000;
+    //background-color:#000;
     background-size:(100%, auto);
     background-repeat:no-repeat;
 }
@@ -17,7 +17,8 @@ h4{
     position: relative;
     background: #000;
     //overflow: hidden;
-    height:100%;
+    height:auto;
+    min-height:100%;
 }
 
 .container-fluid:before {
@@ -45,8 +46,15 @@ h4{
     //background-image: url('./images/patchmeinblur.png');
     background-image: url('./images/towers.jpg');
     background-size: cover;
-    opacity: 0.2;
+    opacity: 0.3;
     color:#fefefe;
+}
+
+.spacer-bottom{
+    margin-bottom:15px;
+}
+.spacer-top{
+    margin-top:15px;
 }
 
 .headshot{
@@ -129,34 +137,52 @@ fieldset[disabled] .btn-white.active {
 }
 
 .about{
-    & > .row{
-        margin-top:0px!important;
+    div, img{
+        border-radius:3px;
+    }
+    & > .row:nth-child(1){
+        margin-top:0px;
     }
     .panel{
+        .back{
+            position:fixed;
+            top:0;
+            left:15px;
+            z-index:2;
+        }
         padding:15px;
         //position:relative;
         color: #fefefe;
         margin-right: auto;
         margin-left: auto;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.0);
         .row{
             margin-top:0px;
         }
     }
     .about-body{
+        padding:15px;
         text-indent: 10px;
         font-size: 16px;
         font-weight: 100;
         font-family:'arial';
+        background-color: rgba(255, 255, 255, 0.8);
+        color:#322f37;
     }
 }
 
 .player-container{
-    color:#fff;
-    position:fixed;
-    bottom:0;
-    right:0;
-    background-color:#000;
+    div{
+        background-color: rgba(255, 255, 255, 0.8);
+        color:#322f37;
+        width:300px;
+        font-size:18pt;
+        padding:5px 0px;
+    }
+    iframe{
+        margin-left:auto;
+        margin-right:auto;
+    }
 }
 
 @media only screen and (min-width : 480px) {
@@ -178,11 +204,11 @@ fieldset[disabled] .btn-white.active {
     .row:nth-child(2){
         margin-top:15px;
     }
-    .player-container{
-        width:100%;
-        position:relative;
+    .about{
         iframe{
             width:100%;
+            margin-left:auto;
+            margin-right:auto;
         }
     }
 }
@@ -193,6 +219,12 @@ fieldset[disabled] .btn-white.active {
     }
     .fa-h1{
         margin-top:50px;
+    }
+
+    .about{
+        & > .row:nth-child(1){
+            margin-top:calc(50vh - 180px);
+        }
     }
 }
 
