@@ -48,6 +48,7 @@ export class AboutComponent implements OnInit {
       // 3. This function creates an <iframe> (and YouTube player)
       //    after the API code downloads.
       let player: any;
+      let YT: any;
       this.player = player = new YT.Player('playertwo', {
         height: 'auto',
         width: '300',
@@ -62,8 +63,6 @@ export class AboutComponent implements OnInit {
 
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event: any) {
-        //event.target.playVideo();
-        console.log(navigator);
 
         var isMobile = {
             Android: function() { return navigator.userAgent.match(/Android/i); },

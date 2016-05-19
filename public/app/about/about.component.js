@@ -56,6 +56,7 @@ System.register(['@angular/core', '@angular/router-deprecated'], function(export
                     // 3. This function creates an <iframe> (and YouTube player)
                     //    after the API code downloads.
                     var player;
+                    var YT;
                     this.player = player = new YT.Player('playertwo', {
                         height: 'auto',
                         width: '300',
@@ -69,8 +70,6 @@ System.register(['@angular/core', '@angular/router-deprecated'], function(export
                     });
                     // 4. The API will call this function when the video player is ready.
                     function onPlayerReady(event) {
-                        //event.target.playVideo();
-                        console.log(navigator);
                         var isMobile = {
                             Android: function () { return navigator.userAgent.match(/Android/i); },
                             BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); },
