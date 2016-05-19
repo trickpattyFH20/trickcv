@@ -70,7 +70,14 @@ System.register(['@angular/core', '@angular/router-deprecated'], function(export
                     // 4. The API will call this function when the video player is ready.
                     function onPlayerReady(event) {
                         //event.target.playVideo();
-                        player.loadPlaylist({ 'list': 'FLzULymNZwMkZqaaNIFcp3fQ' });
+                        console.log(navigator);
+                        var ua = navigator.userAgent.toLowerCase(), deviceType = /android(?!.*mobile)|ipad|kindle|playbook|\btab|surface/.test(ua) ? 'tab' : /mobi|windows phone|iphone|blackberry/.test(ua) ? 'mobile' : 'desktop';
+                        if (deviceType == 'mobile') {
+                            player.cuePlaylist({ 'list': 'FLzULymNZwMkZqaaNIFcp3fQ' });
+                        }
+                        else {
+                            player.loadPlaylist({ 'list': 'FLzULymNZwMkZqaaNIFcp3fQ' });
+                        }
                         player.mute();
                     }
                     // 5. The API calls this function when the player's state changes.

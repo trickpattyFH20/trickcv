@@ -63,7 +63,14 @@ export class AboutComponent implements OnInit {
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event: any) {
         //event.target.playVideo();
-        player.loadPlaylist({'list':'FLzULymNZwMkZqaaNIFcp3fQ'})
+        console.log(navigator);
+        var ua = navigator.userAgent.toLowerCase(),
+            deviceType = /android(?!.*mobile)|ipad|kindle|playbook|\btab|surface/.test(ua) ? 'tab' : /mobi|windows phone|iphone|blackberry/.test(ua) ? 'mobile' : 'desktop';
+        if(deviceType == 'mobile'){
+            player.cuePlaylist({'list':'FLzULymNZwMkZqaaNIFcp3fQ'})
+        }else{
+            player.loadPlaylist({'list':'FLzULymNZwMkZqaaNIFcp3fQ'})
+        }
         player.mute()
       }
 
