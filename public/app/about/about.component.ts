@@ -63,6 +63,7 @@ export class AboutComponent implements OnInit {
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event: any) {
         //event.target.playVideo();
+        console.log(navigator);
 
         var isMobile = {
             Android: function() { return navigator.userAgent.match(/Android/i); },
@@ -73,7 +74,7 @@ export class AboutComponent implements OnInit {
             any: function() { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
         };
 
-        if(isMobile.any()){
+        if(isMobile.any() != null){
             player.cuePlaylist({'list':'FLzULymNZwMkZqaaNIFcp3fQ'})
         }else{
             player.loadPlaylist({'list':'FLzULymNZwMkZqaaNIFcp3fQ'})

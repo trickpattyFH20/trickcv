@@ -70,6 +70,7 @@ System.register(['@angular/core', '@angular/router-deprecated'], function(export
                     // 4. The API will call this function when the video player is ready.
                     function onPlayerReady(event) {
                         //event.target.playVideo();
+                        console.log(navigator);
                         var isMobile = {
                             Android: function () { return navigator.userAgent.match(/Android/i); },
                             BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); },
@@ -78,7 +79,7 @@ System.register(['@angular/core', '@angular/router-deprecated'], function(export
                             Windows: function () { return navigator.userAgent.match(/IEMobile/i); },
                             any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
                         };
-                        if (isMobile.any()) {
+                        if (isMobile.any() != null) {
                             player.cuePlaylist({ 'list': 'FLzULymNZwMkZqaaNIFcp3fQ' });
                         }
                         else {
