@@ -162,8 +162,6 @@ fieldset[disabled] .btn-white.active {
     font-size: 50px; }
   .row:nth-child(1) {
     margin-top: 50px; }
-    .row:nth-child(1) .col-xs-12:nth-child(3) {
-      margin-top: 15px; }
   .row:nth-child(2) {
     margin-top: 15px; }
   .about iframe {

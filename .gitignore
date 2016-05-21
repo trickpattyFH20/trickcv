@@ -6,3 +6,5 @@ connect
 
 # npm
 /node_modules
+
+build-help-readme.txt
