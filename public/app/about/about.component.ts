@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ROUTER_DIRECTIVES, Router } from '@angular/router-deprecated';
+/// <reference path="../../../typings/youtube.d.ts"/>
+
+//declare var YT: any;
 
 @Component({
   templateUrl: 'app/about/about.component.html',
@@ -48,7 +51,6 @@ export class AboutComponent implements OnInit {
       // 3. This function creates an <iframe> (and YouTube player)
       //    after the API code downloads.
       let player: any;
-      let YT: any;
       this.player = player = new YT.Player('playertwo', {
         height: 'auto',
         width: '300',

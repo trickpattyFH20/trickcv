@@ -21,6 +21,8 @@ System.register(['@angular/core', '@angular/router-deprecated'], function(export
                 router_deprecated_1 = router_deprecated_1_1;
             }],
         execute: function() {
+            /// <reference path="../../../typings/youtube.d.ts"/>
+            //declare var YT: any;
             AboutComponent = (function () {
                 function AboutComponent() {
                     this.muted = true;
@@ -56,7 +58,6 @@ System.register(['@angular/core', '@angular/router-deprecated'], function(export
                     // 3. This function creates an <iframe> (and YouTube player)
                     //    after the API code downloads.
                     var player;
-                    var YT;
                     this.player = player = new YT.Player('playertwo', {
                         height: 'auto',
                         width: '300',
