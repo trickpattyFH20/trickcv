@@ -17,6 +17,8 @@ export class AboutComponent implements OnInit {
 
     private muted: boolean = true;
 
+    public isMobile: boolean = false;
+
     public toggleMute(){
         if(this.player.isMuted()){
             this.muted = false;
@@ -42,6 +44,7 @@ export class AboutComponent implements OnInit {
     // }
 
     ngOnInit(){
+      let that = this;
       var tag = document.createElement('script');
 
       tag.src = "https://www.youtube.com/iframe_api";
@@ -76,7 +79,7 @@ export class AboutComponent implements OnInit {
         };
 
         if(isMobile.any() != null){
-            this.isMobile = true;
+            that.isMobile = true;
             player.cuePlaylist({'list':'FLzULymNZwMkZqaaNIFcp3fQ'})
         }else{
             player.loadPlaylist({'list':'FLzULymNZwMkZqaaNIFcp3fQ'})

@@ -26,6 +26,7 @@ System.register(['@angular/core', '@angular/router-deprecated'], function(export
             AboutComponent = (function () {
                 function AboutComponent() {
                     this.muted = true;
+                    this.isMobile = false;
                 }
                 AboutComponent.prototype.sendEmail = function () {
                     window.location.href = "mailto:patricktlawler@gmail.com";
@@ -51,6 +52,7 @@ System.register(['@angular/core', '@angular/router-deprecated'], function(export
                 //   });
                 // }
                 AboutComponent.prototype.ngOnInit = function () {
+                    var that = this;
                     var tag = document.createElement('script');
                     tag.src = "https://www.youtube.com/iframe_api";
                     var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -80,7 +82,7 @@ System.register(['@angular/core', '@angular/router-deprecated'], function(export
                             any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
                         };
                         if (isMobile.any() != null) {
-                            this.isMobile = true;
+                            that.isMobile = true;
                             player.cuePlaylist({ 'list': 'FLzULymNZwMkZqaaNIFcp3fQ' });
                         }
                         else {
