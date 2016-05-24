@@ -11,6 +11,9 @@ h4{
     font-weight: 300;
     font-size:16px;
 }
+a:hover{
+    cursor:pointer!important;
+}
 .container-fluid{
     padding-top:15px;
     padding-bottom:100px;
@@ -137,6 +140,12 @@ fieldset[disabled] .btn-white.active {
 }
 
 .about{
+    // .candid{
+    //     img{
+    //         width:230px;
+    //         float:right;
+    //     }
+    // }
     div, img{
         border-radius:3px;
     }
@@ -169,17 +178,32 @@ fieldset[disabled] .btn-white.active {
         background-color: rgba(255, 255, 255, 0.8);
         color:#322f37;
     }
+    .tech-assets{
+        img{
+            height:50px;
+            width:auto;
+        }
+    }
+    .candid{
+        img{
+            height:265px;
+        }
+    }
 }
 
 .player-container{
+    a:hover{
+        text-decoration: none;
+    }
     div{
         background-color: rgba(255, 255, 255, 0.8);
         color:#322f37;
-        width:300px;
+        width:230px;
         font-size:18pt;
         padding:5px 0px;
     }
     iframe{
+        width:230px;
         margin-left:auto;
         margin-right:auto;
     }
@@ -223,7 +247,20 @@ fieldset[disabled] .btn-white.active {
 
     .about{
         & > .row:nth-child(1){
-            margin-top:calc(50vh - 180px);
+            //margin-top:calc(50vh - 180px);
+        }
+        .candid{
+            img{
+                float:right;
+            }
+        }
+        .player-container{
+            div{
+                float:right;
+            }
+            iframe{
+                float:right;
+            }
         }
     }
 }

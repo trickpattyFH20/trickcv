@@ -7,24 +7,58 @@
                         <i class="fa fa-h1 fa-arrow-circle-o-left pull-left" aria-hidden="true"></i>
                     </a>
                 </div>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-4 spacer-bottom">
-                        <img height="230" src="images/action.png" style="margin-left:15px;" />
+                <div class="row spacer-bottom">
+                    <div class="col-xs-12 col-sm-4 spacer-bottom candid">
+                        <img src="images/action.png" style="margin-left:15px;" />
+                        <div class="player-container">
+                            <div class="center-block spacer-bottom spacer-top">
+                                music I jam to:<a (click)="toggleMute()">
+                                    <span *ngIf="!isMobile">
+                                        <i *ngIf="muted" class="fa fa-volume-off" aria-hidden="false"></i>
+                                        <i *ngIf="!muted" class="fa fa-volume-up" aria-hidden="false"></i>
+                                    </span>
+                                </a>
+                            </div>
+                            <div id="playertwo" style="display:block;">
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-xs-12 col-sm-8 col-md-4 about-body text-left spacer-bottom">
-                        <p>
-                            I am a PC gamer and a fan of anything sci-fi / fantasy related.
-                            My fascination with code was sparked in middle school when I discovered
-                            video game console commands, Ti-83 calculator hacks, and Neopets + MySpace plugins. This fascination
-                            solidified when I watched the movie "Hackers" for the first time.
-                        </p>
-                        <p>
-                            I cut my teeth as a developer with the innovative startup, <a href="http://homeation.com/">Homeation</a>,
-                            in Silicon Beach (West Los Angeles). I am currently living in New York and enjoying my time as an
-                            engineer with the development team at <a href="http://guidepoint.com">Guidepoint Global</a>.
-                        </p>
+                    <div class="col-xs-12 col-sm-8 col-md-7 text-left spacer-bottom">
+                        <div class="about-body spacer-bottom">
+                            <p>
+                                I am a PC gamer and a fan of anything sci-fi / fantasy related.
+                                My fascination with code was sparked in middle school when I discovered
+                                video game console commands, Ti-83 calculator hacks, and Neopets + MySpace plugins. This fascination
+                                solidified when I watched the movie "Hackers" for the first time.
+                            </p>
+                            <p>
+                                I cut my teeth as a developer with the innovative startup, <a href="http://homeation.com/">Homeation</a>,
+                                in Silicon Beach (West Los Angeles). I am currently living in New York and enjoying my time as an
+                                engineer with the development team at <a href="http://guidepoint.com">Guidepoint Global</a>.
+                            </p>
+                        </div>
+                        <div class="about-body">
+                            <p>
+                                You can view the source code for trickpatty.io <a href="https://github.com/trickpattyFH20/trickpatty.io">here on the public github repo</a>
+                                and watch as I add new technologies and new projects.
+                            </p>
+                            <p>
+                                The architechture I used for this site is my favorite stack: AWS + Linux + node.js + AngularJS (Angular2 - TypeScript).
+                            </p>
+                            <p>
+                                I'm also a huge fan of the SaaS platforms Cloudflare and Detectify , which I implement on most of my publicy available projects.
+                            </p>
+                            <div class="tech-assets text-center">
+                                <img src="/images/assets/cf.png" /> +
+                                <img src="/images/assets/aws.png" /> +
+                                <img src="/images/assets/linux.png" /> +
+                                <img src="/images/assets/node.png" /> +
+                                <img src="/images/assets/ng.png" /> +
+                                <img src="/images/assets/detectify.png" />
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-xs-12 col-md-4 text-center">
+                    <!-- <div class="col-xs-12 col-md-4 text-center">
                         <div class="player-container">
                             <div class="center-block spacer-bottom">
                                 music I jam to:
@@ -32,7 +66,29 @@
                             <div id="playertwo" style="display:block;">
                             </div>
                         </div>
-                    </div>
+                    </div> -->
+                </div>
+                <div class="row spacer-bottom">
+                    <!-- <div class="col-xs-12 col-md-6 col-md-offset-2 about-body">
+                        <p>
+                            You can view the source code for trickpatty.io <a href="https://github.com/trickpattyFH20/trickpatty.io">here on the public github repo</a>
+                            and watch as I add new technologies and new projects.
+                        </p>
+                        <p>
+                            The architechture I used for this site is my favorite stack: AWS + Linux + node.js + AngularJS (Angular2 - TypeScript).
+                        </p>
+                        <p>
+                            I'm also a huge fan of the SaaS platforms Cloudflare and Detectify , which I implement on most of my publicy available projects.
+                        </p>
+                        <div class="tech-assets text-center">
+                            <img src="/images/assets/cf.png" /> +
+                            <img src="/images/assets/aws.png" /> +
+                            <img src="/images/assets/linux.png" /> +
+                            <img src="/images/assets/node.png" /> +
+                            <img src="/images/assets/ng.png" /> +
+                            <img src="/images/assets/detectify.png" />
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>

@@ -80,6 +80,7 @@ System.register(['@angular/core', '@angular/router-deprecated'], function(export
                             any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
                         };
                         if (isMobile.any() != null) {
+                            this.isMobile = true;
                             player.cuePlaylist({ 'list': 'FLzULymNZwMkZqaaNIFcp3fQ' });
                         }
                         else {

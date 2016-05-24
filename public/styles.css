@@ -10,6 +10,9 @@ h4 {
   font-weight: 300;
   font-size: 16px; }
 
+a:hover {
+  cursor: pointer !important; }
+
 .container-fluid {
   padding-top: 15px;
   padding-bottom: 100px;
@@ -145,14 +148,25 @@ fieldset[disabled] .btn-white.active {
   background-color: rgba(255, 255, 255, 0.8);
   color: #322f37; }
 
+.about .tech-assets img {
+  height: 50px;
+  width: auto; }
+
+.about .candid img {
+  height: 265px; }
+
+.player-container a:hover {
+  text-decoration: none; }
+
 .player-container div {
   background-color: rgba(255, 255, 255, 0.8);
   color: #322f37;
-  width: 300px;
+  width: 230px;
   font-size: 18pt;
   padding: 5px 0px; }
 
 .player-container iframe {
+  width: 230px;
   margin-left: auto;
   margin-right: auto; }
 
@@ -174,8 +188,12 @@ fieldset[disabled] .btn-white.active {
     margin-top: calc(50vh - 275px); }
   .fa-h1 {
     margin-top: 50px; }
-  .about > .row:nth-child(1) {
-    margin-top: calc(50vh - 180px); } }
+  .about .candid img {
+    float: right; }
+  .about .player-container div {
+    float: right; }
+  .about .player-container iframe {
+    float: right; } }
 
 @media only screen and (min-width: 992px) {
   /*.fa-h1{

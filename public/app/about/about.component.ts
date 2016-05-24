@@ -76,6 +76,7 @@ export class AboutComponent implements OnInit {
         };
 
         if(isMobile.any() != null){
+            this.isMobile = true;
             player.cuePlaylist({'list':'FLzULymNZwMkZqaaNIFcp3fQ'})
         }else{
             player.loadPlaylist({'list':'FLzULymNZwMkZqaaNIFcp3fQ'})
