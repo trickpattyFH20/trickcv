@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/router-deprecated', './home/home.component', './about/about.component'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/router-deprecated', './home/home.component', './about/about.component', './work/work.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', '@angular/router-deprecated', './home/home.com
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_deprecated_1, home_component_1, about_component_1;
+    var core_1, router_deprecated_1, home_component_1, about_component_1, work_component_1;
     var AppComponent;
     return {
         setters:[
@@ -25,6 +25,9 @@ System.register(['@angular/core', '@angular/router-deprecated', './home/home.com
             },
             function (about_component_1_1) {
                 about_component_1 = about_component_1_1;
+            },
+            function (work_component_1_1) {
+                work_component_1 = work_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -40,6 +43,7 @@ System.register(['@angular/core', '@angular/router-deprecated', './home/home.com
                     router_deprecated_1.RouteConfig([
                         { path: '/home', component: home_component_1.HomeComponent, name: 'Home' },
                         { path: '/about', component: about_component_1.AboutComponent, name: 'About' },
+                        { path: '/work', component: work_component_1.WorkComponent, name: 'Work' },
                         { path: '/**', redirectTo: ['Home'] }
                     ]), 
                     __metadata('design:paramtypes', [])

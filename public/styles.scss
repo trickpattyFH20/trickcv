@@ -1,3 +1,11 @@
+//mixins
+.nounderline{
+    a:hover{
+        text-decoration: none;
+    }
+}
+
+//styles
 html, body{
     //background-color:#000;
     background-size:(100%, auto);
@@ -46,10 +54,10 @@ a:hover{
     //background-image: url('http://i0.wp.com/bitcast-a-sm.bitgravity.com/slashfilm/wp/wp-content/images/59481-hackers.jpg');
 }
 .container-fluid.about:before{
-    //background-image: url('./images/patchmeinblur.png');
-    background-image: url('./images/towers.jpg');
-    background-size: cover;
-    opacity: 0.3;
+    background-image: url('./images/patchmeinblur.png');
+    //background-image: url('./images/towers.jpg');
+    //background-size: cover;
+    opacity: 0.1;
     color:#fefefe;
 }
 
@@ -79,9 +87,7 @@ a:hover{
 }
 
 .home{
-    a:hover{
-        text-decoration: none;
-    }
+    @extend .nounderline;
 }
 
 .row:nth-child(1){
@@ -192,9 +198,7 @@ fieldset[disabled] .btn-white.active {
 }
 
 .player-container{
-    a:hover{
-        text-decoration: none;
-    }
+    @extend .nounderline;
     div{
         background-color: rgba(255, 255, 255, 0.8);
         color:#322f37;
@@ -236,8 +240,14 @@ fieldset[disabled] .btn-white.active {
         }
     }
 }
+.projects{
+    @extend .nounderline;
+}
 
 @media only screen and (min-width : 768px) {
+    .projects{
+        margin-left:50px;
+    }
     .row:nth-child(2){
         margin-top:calc(50vh - 275px);
     }

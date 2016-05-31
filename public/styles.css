@@ -1,3 +1,6 @@
+.nounderline a:hover, .home a:hover, .player-container a:hover, .projects a:hover {
+  text-decoration: none; }
+
 html, body {
   background-size: 100%, auto;
   background-repeat: no-repeat; }
@@ -40,9 +43,8 @@ a:hover {
   background-image: url("./images/patchmeinblur.png"); }
 
 .container-fluid.about:before {
-  background-image: url("./images/towers.jpg");
-  background-size: cover;
-  opacity: 0.3;
+  background-image: url("./images/patchmeinblur.png");
+  opacity: 0.1;
   color: #fefefe; }
 
 .spacer-bottom {
@@ -67,9 +69,6 @@ a:hover {
 
 .fa-h1 a {
   color: #fefefe; }
-
-.home a:hover {
-  text-decoration: none; }
 
 .row:nth-child(1) {
   margin-top: 50px; }
@@ -155,9 +154,6 @@ fieldset[disabled] .btn-white.active {
 .about .candid img {
   height: 265px; }
 
-.player-container a:hover {
-  text-decoration: none; }
-
 .player-container div {
   background-color: rgba(255, 255, 255, 0.8);
   color: #322f37;
@@ -184,6 +180,8 @@ fieldset[disabled] .btn-white.active {
     margin-right: auto; } }
 
 @media only screen and (min-width: 768px) {
+  .projects {
+    margin-left: 50px; }
   .row:nth-child(2) {
     margin-top: calc(50vh - 275px); }
   .fa-h1 {

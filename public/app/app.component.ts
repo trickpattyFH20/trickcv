@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES, RouteConfig, Router } from '@angular/router-deprecated';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { WorkComponent } from './work/work.component';
 
 @Component({
   selector: 'my-app',
@@ -13,6 +14,7 @@ import { AboutComponent } from './about/about.component';
 @RouteConfig([
   { path: '/home', component: HomeComponent, name: 'Home' },
   { path: '/about', component: AboutComponent, name: 'About' },
+  { path: '/work', component: WorkComponent, name: 'Work' },
   { path: '/**', redirectTo: ['Home'] }
 ])
 

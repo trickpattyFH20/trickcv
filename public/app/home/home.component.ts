@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES, Router } from '@angular/router-deprecated';
 
+
 @Component({
   templateUrl: 'app/home/home.component.html',
   directives: [ ROUTER_DIRECTIVES ]
