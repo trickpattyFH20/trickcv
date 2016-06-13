@@ -25,8 +25,7 @@ router.get('/prime/factors/:num', function(req, res) {
                         factors.push(divisor);
                     }
                     n= n/ divisor;
-                }
-                else{
+                }else{
                     divisor++;
                 }
             }
@@ -52,6 +51,9 @@ router.get('/prime/factors/:num', function(req, res) {
 router.get('/prime/:num', function(req, res) {
 
     try{
+        if(isNaN(req.params.num)){
+            throw('param must be a number')
+        }
         //execution time start
         var start = new Date().getTime(),
             end,
