@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/trickpatty
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://trickpatty.io
+  * I am trickpatty (https://keybase.io/trickpatty) on keybase.
+  * I have a public key ASDv0e3KFS_ZGRIH1TjJ2D-3f6AM9UGXOpEx_SfFZs2j5Ao
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101b7a5613ee3ebe38ca62e784c41fe34490721ed2fb436dcf5d92dcd567af8402b0a",
+            "host": "keybase.io",
+            "kid": "0120efd1edca152fd9191207d538c9d83fb77fa00cf541973a9131fd27c566cda3e40a",
+            "uid": "a795de90beab88c0be647f9edeb6bf19",
+            "username": "trickpatty"
+        },
+        "service": {
+            "hostname": "trickpatty.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.16"
+    },
+    "ctime": 1469071340,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1469071312,
+        "hash": "0a3acc368cd205f12e56ccf7232363ae58ef8e9bfba19f11c07756b516b13ea65cb30400c7a880a8b24939351386cab2f5d455d216945245b92e63f3a372a1bd",
+        "seqno": 535293
+    },
+    "prev": "8559c3e8b8dcdac7d5bbd9f7acef214573a89e764d0b9ef091a58802658d2b46",
+    "seqno": 19,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg79HtyhUv2RkSB9U4ydg/t3+gDPVBlzqRMf0nxWbNo+QKp3BheWxvYWTFAvh7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxYjdhNTYxM2VlM2ViZTM4Y2E2MmU3ODRjNDFmZTM0NDkwNzIxZWQyZmI0MzZkY2Y1ZDkyZGNkNTY3YWY4NDAyYjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZWZkMWVkY2ExNTJmZDkxOTEyMDdkNTM4YzlkODNmYjc3ZmEwMGNmNTQxOTczYTkxMzFmZDI3YzU2NmNkYTNlNDBhIiwidWlkIjoiYTc5NWRlOTBiZWFiODhjMGJlNjQ3ZjllZGViNmJmMTkiLCJ1c2VybmFtZSI6InRyaWNrcGF0dHkifSwic2VydmljZSI6eyJob3N0bmFtZSI6InRyaWNrcGF0dHkuaW8iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xNiJ9LCJjdGltZSI6MTQ2OTA3MTM0MCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDY5MDcxMzEyLCJoYXNoIjoiMGEzYWNjMzY4Y2QyMDVmMTJlNTZjY2Y3MjMyMzYzYWU1OGVmOGU5YmZiYTE5ZjExYzA3NzU2YjUxNmIxM2VhNjVjYjMwNDAwYzdhODgwYThiMjQ5MzkzNTEzODZjYWIyZjVkNDU1ZDIxNjk0NTI0NWI5MmU2M2YzYTM3MmExYmQiLCJzZXFubyI6NTM1MjkzfSwicHJldiI6Ijg1NTljM2U4YjhkY2RhYzdkNWJiZDlmN2FjZWYyMTQ1NzNhODllNzY0ZDBiOWVmMDkxYTU4ODAyNjU4ZDJiNDYiLCJzZXFubyI6MTksInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAN/NQv+Kt4vwNK0Lj4kQjg4wNPX+cq/2Rlw8X59zKeKSjq8c3wfXbxCMrvWU1tccqob2WFGeaFV7+wQCdSXFGDKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIHtXL917Ya8ZhP/1xJxi0JVHfhAPnQCExZoauP7YFzazo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/trickpatty
+
+==================================================================
