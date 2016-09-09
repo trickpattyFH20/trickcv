@@ -8,3 +8,6 @@ connect
 /node_modules
 
 build-help-readme.txt
+
+public/app/**/*.js
+public/app/**/*.js.map
