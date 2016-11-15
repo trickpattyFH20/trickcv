@@ -1,7 +1,7 @@
 'use strict';
 
 let twilio = require('twilio'),
-    bodyParser = require('body-parser')l
+    bodyParser = require('body-parser');
 
 function twilioEndpoint(app){
     app.use(bodyParser.urlencoded({ extended: false }));
