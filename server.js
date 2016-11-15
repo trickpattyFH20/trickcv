@@ -4,6 +4,41 @@ var http = require('http');
 var app = express();
 var path = require('path');
 var fs = require('fs');
+var twilio = require('twilio');
+var express = require('express');
+var bodyParser = require('body-parser');
+
+app.post('/voice', function (req, res) {
+    console.log(req.body);
+    // Create TwiML response
+    var twiml = new twilio.TwimlResponse();
+
+    if(req.body.To) {
+        twiml.dial({ }, function() {
+            // wrap the phone number or client name in the appropriate TwiML verb
+            // by checking if the number given has only digits and format symbols
+            if (/^[\d\+\-\(\) ]+$/.test(req.body.To)) {
+                console.log('1st condition');
+
+                var numberDialer = function(dial) {
+                    dial.number(req.body.To);
+                };
+
+                twiml.dial({callerId: '+18475011344' }, numberDialer);
+
+            } else {
+
+                console.log('2nd condition')
+                this.client(req.body.To);
+            }
+        });
+    } else {
+        twiml.say("Thanks for calling!");
+    }
+
+    res.set('Content-Type', 'text/xml');
+    res.send(twiml.toString());
+});
 
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
 app.use(express.static(path.join(__dirname, 'public/app')));
