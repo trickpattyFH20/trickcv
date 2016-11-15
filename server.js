@@ -1,3 +1,5 @@
+'use strict';
+
 let express = require('express'),
     https = require('https'),
     http = require('http'),
