@@ -1,39 +1,40 @@
 'use strict';
 
 let twilio = require('twilio'),
-    bodyParser = require('body-parser'),
-    router = require('express').Router();
+    bodyParser = require('body-parser')l
 
-router.use(bodyParser.urlencoded({ extended: false }));
+function twilioEndpoint(app){
+    app.use(bodyParser.urlencoded({ extended: false }));
 
-router.post('/voice', (req, res) => {
-    // Create TwiML response
-    let twiml = new twilio.TwimlResponse();
+    app.post('/voice', (req, res) => {
+        // Create TwiML response
+        let twiml = new twilio.TwimlResponse();
 
-    if(req.body.To) {
-        twiml.dial({ }, () => {
-            // wrap the phone number or client name in the appropriate TwiML verb
-            // by checking if the number given has only digits and format symbols
-            if (/^[\d\+\-\(\) ]+$/.test(req.body.To)) {
+        if(req.body.To) {
+            twiml.dial({ }, () => {
+                // wrap the phone number or client name in the appropriate TwiML verb
+                // by checking if the number given has only digits and format symbols
+                if (/^[\d\+\-\(\) ]+$/.test(req.body.To)) {
 
-                let numberDialer = dial => {
-                    dial.number(req.body.To);
-                };
+                    let numberDialer = dial => {
+                        dial.number(req.body.To);
+                    };
 
-                twiml.dial({callerId: '+18475011344' }, numberDialer);
+                    twiml.dial({callerId: '+18475011344' }, numberDialer);
 
-            } else {
+                } else {
 
-                console.log('2nd condition')
-                this.client(req.body.To);
-            }
-        });
-    } else {
-        twiml.say("Thanks for calling!");
-    }
+                    console.log('2nd condition')
+                    this.client(req.body.To);
+                }
+            });
+        } else {
+            twiml.say("Thanks for calling!");
+        }
 
-    res.set('Content-Type', 'text/xml');
-    res.send(twiml.toString());
-});
+        res.set('Content-Type', 'text/xml');
+        res.send(twiml.toString());
+    });
+}
 
-module.exports = router;
+module.exports = twilioEndpoint;

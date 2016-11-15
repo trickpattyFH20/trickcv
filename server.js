@@ -11,10 +11,9 @@ app.use('/node_modules', express.static(__dirname + '/node_modules'));
 app.use(express.static(path.join(__dirname, 'public/app')));
 
 let forscience = require('./csapi'),
-    twilioVoice = require('./twilio');
+    twilioVoice = require('./twilio')(app);
 
 app.use('/forscience', forscience);
-app.use('/voice', twilioVoice);
 app.use('/', express.static(__dirname + '/public/app/prod'));
 app.use('/*', express.static(__dirname + '/public/app/prod'));
 
