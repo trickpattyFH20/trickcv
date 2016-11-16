@@ -1,3 +1,4 @@
+
 'use strict';
 
 let express = require('express'),
@@ -9,15 +10,16 @@ let express = require('express'),
 
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
 app.use(express.static(path.join(__dirname, 'public/app')));
+app.use(express.static(path.join(__dirname, 'public/static')));
 
 let forscience = require('./csapi'),
-    twilioVoice = require('./twilio')(app);
+    twilioVoice = require('./twilio')(app),
+    gentest = require('./gentest');
 
 app.use('/forscience', forscience);
+app.use('/gentest', gentest);
 app.use('/', express.static(__dirname + '/public/app/prod'));
 app.use('/*', express.static(__dirname + '/public/app/prod'));
-
-//app.listen(8080, function() { console.log('listening'); });
 
 let pkey = fs.readFileSync('key.pem'),
     pcert = fs.readFileSync('cert.pem')
