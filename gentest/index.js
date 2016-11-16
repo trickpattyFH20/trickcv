@@ -8,7 +8,8 @@ let express = require('express'),
 	{M: 3, arr: [1, 2, 3, 4, 5]},
 	{M: 2, arr: [1, 3, 5, 7]},
 	{M: 4, arr: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]},
-	{M: 2, arr: [1, 3, 3, 7]}
+	{M: 2, arr: [1, 3, 3, 7]},
+	{M: 2, arr: ['a', 'b', 'c', 'd', 'e', 'f', 'g']}
     ];
 
 router.use(function(req, res, next) {
