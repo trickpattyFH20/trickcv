@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Generator Challenge</title>
+</head>
+<body>
+
+<h3>Generator Challenge Answer</h3>
+
+<pre>
+function findGenIndices(generator, M) {
+
+    let done = false,
+        output = [],
+        values = [];
+    
+    while(!done) {
+    	let next = generator.next();
+        if(!next.done) {
+            values.push(next.value);
+        } else {
+       	    done = true;
+        }
+    }
+
+    output.push(values[M - 1]);
+    output.push(values[(parseInt(values.length) - M)]);
+
+    return output;
+}
+</pre>
+
+</body>
+</html>

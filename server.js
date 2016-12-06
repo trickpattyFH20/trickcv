@@ -1,25 +1,30 @@
-var express = require('express');
-var https = require('https');
-var http = require('http');
-var app = express();
-var path = require('path');
-var fs = require('fs');
+
+'use strict';
+
+let express = require('express'),
+    https = require('https'),
+    http = require('http'),
+    app = express(),
+    path = require('path'),
+    fs = require('fs')
 
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public/app')));
+app.use(express.static(path.join(__dirname, 'public/static')));
 
-var forscience = require('./csapi');
+let forscience = require('./csapi'),
+    twilioVoice = require('./twilio')(app),
+    gentest = require('./gentest');
 
 app.use('/forscience', forscience);
-app.use('/', express.static(__dirname + '/public'));
-app.use('/*', express.static(__dirname + '/public'));
+app.use('/gentest', gentest);
+app.use('/', express.static(__dirname + '/public/app/prod'));
+app.use('/*', express.static(__dirname + '/public/app/prod'));
 
-//app.listen(8080, function() { console.log('listening'); });
+let pkey = fs.readFileSync('key.pem'),
+    pcert = fs.readFileSync('cert.pem')
 
-var pkey = fs.readFileSync('key.pem');
-var pcert = fs.readFileSync('cert.pem')
-
-var options = {
+let options = {
     key: pkey,
     cert: pcert
 };
