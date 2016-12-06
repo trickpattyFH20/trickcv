@@ -3,7 +3,7 @@ http://trickpatty.io
 
 Personal website and portfolio written with node + express + Angular 2 (typescript)
 
-## [Generator Challenge](http://trickpatty.io/gentest/sandbox)
+## Generator Challenge
 **http://trickpatty.io/gentest/sandbox**
 
 A JavaScript code challenge! I have also included endpoints to run answers against some test cases.
