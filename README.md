@@ -22,7 +22,8 @@ A JavaScript code challenge! I have also included endpoints to run answers again
 
 [*Generator Challenge solution*](http://trickpatty.io/gentest/answer)
 
-## other REST Endpoints:
+## Other REST Endpoints:
+___
 ### URL
 
   /forscience/prime/:number
@@ -51,7 +52,7 @@ A JavaScript code challenge! I have also included endpoints to run answers again
 
 #### Notes
 This endpoint can be used to check if a number is prime.
-
+___
 ### URL
 
   /forscience/prime/factors/:number
