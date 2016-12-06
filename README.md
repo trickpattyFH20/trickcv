@@ -20,7 +20,7 @@ A JavaScript code challenge! I have also included endpoints to run answers again
 
 * Header: 'Content-Type', 'application/json; charset=UTF-8'
 
-[*Generator Challenge solution*](**http://trickpatty.io/gentest/answer**)
+[*Generator Challenge solution*](http://trickpatty.io/gentest/answer)
 
 ## other REST Endpoints:
 ### URL
