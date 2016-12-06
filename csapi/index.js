@@ -12,8 +12,8 @@ router.get('/prime/factors/:num', function(req, res) {
         if(isNaN(req.params.num)){
             throw('param must be a number')
         }
-        if(req.params.num > 1000000000000000){
-            throw('number must be less than 1000000000000000')
+        if(req.params.num > 100000000){
+            throw('number must be less than 100000000')
         }
         var factors = function(n){
             var factors = [],
@@ -53,6 +53,9 @@ router.get('/prime/:num', function(req, res) {
     try{
         if(isNaN(req.params.num)){
             throw('param must be a number')
+        }
+        if(req.params.num > 100000000){
+            throw('number must be less than 100000000')
         }
         //execution time start
         var start = new Date().getTime(),
