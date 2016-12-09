@@ -42,8 +42,7 @@ ts-node
 /tools/**/*.js
 dist/dev
 dist/tmp
-public/app/tmp
-public/app/dev
+public/app
 dev
 docs
 lib
