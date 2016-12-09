@@ -40,7 +40,8 @@ ts-node
 *.iml
 
 /tools/**/*.js
-dist
+dist/dev
+dist/tmp
 public/app
 dev
 docs
