@@ -21,8 +21,8 @@ app.use('/gentest', gentest);
 app.use('/', express.static(__dirname + '/public/app/prod'));
 app.use('/*', express.static(__dirname + '/public/app/prod'));
 
-let pkey = fs.readFileSync('key.pem'),
-    pcert = fs.readFileSync('cert.pem')
+let pkey = fs.readFileSync('./private/key.pem'),
+    pcert = fs.readFileSync('./private/cert.pem')
 
 let options = {
     key: pkey,
