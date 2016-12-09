@@ -214,7 +214,7 @@ export class SeedConfig {
    * The base folder for built files.
    * @type {string}
    */
-  DIST_DIR = 'dist';
+  DIST_DIR = 'public/app';
 
   /**
    * The folder for built files in the `dev` environment.
