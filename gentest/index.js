@@ -3,13 +3,28 @@
 let express = require('express'),
     router = express.Router(),
     bodyParser = require('body-parser'),
-    cases = [
-        {M: 2, arr: [1, 2, 3]},
-	{M: 3, arr: [1, 2, 3, 4, 5]},
-	{M: 2, arr: [1, 3, 5, 7]},
-	{M: 4, arr: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]},
-	{M: 2, arr: [1, 3, 3, 7]},
-	{M: 2, arr: ['a', 'b', 'c', 'd', 'e', 'f', 'g']}
+    caseGroups = [
+        [
+            {M: 2, arr: [1, 2, 3]},
+            {M: 3, arr: [1, 2, 3, 4, 5]},
+            {M: 2, arr: [1, 3, 5, 12]},
+            {M: 4, arr: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]},
+            {M: 2, arr: [1, 3, 3, 7]},
+            {M: 2, arr: ['a', 'b', 'c', 'd', 'e', 'f', 'g']}
+        ],
+        [
+            {M: 2, arr: [1337, 8888, 1234]},
+            {M: 2, arr: ['1a', '2b', '3c', '4d', '5e']},
+            {M: 2, arr: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']},
+            {M: 1, arr: ['xyz', 'abc', 'def', 678]},
+        ],
+        [
+            {M: 2, arr: [1, 3, 5, 12]},
+            {M: 2, arr: ['a', 'b', 'c', 'd', 'e', 'f', 'g']},
+            {M: 3, arr: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]},
+            {M: 2, arr: [1, 3, 3, 7]},
+            {M: 1, arr: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']}
+        ]
     ];
 
 router.use(function(req, res, next) {
@@ -21,29 +36,35 @@ router.use(function(req, res, next) {
 router.use(bodyParser.json());
 
 router.get('/', function(req, res) {
-
-    res.json(cases);
-
+    let rollCase = Math.floor(Math.random() * 3)
+    let caseInfo = {
+        caseNumber: rollCase,
+        cases: caseGroups[rollCase]
+    }
+    res.json(caseInfo);
 });
 
 router.post('/', function(req, res) {
-    //console.log(req.body);
-    let checks = '';
-    for(var i=0, len=req.body.length; i < len; i++){
 
-	if(req.body[i] === null || req.body[i] === 'undefined') {
-	    res.send('invalid');
-	    return;
-	}
+    let checks = '',
+        caseNumber = req.body.caseNumber,
+        answers = req.body.answers
+
+    for(var i=0, len=answers.length; i < len; i++){
+
+        if(answers[i] === null || answers[i] === 'undefined') {
+            res.send('invalid');
+            return;
+        }
 
         if(
-	    (req.body[i][0] === cases[i]['arr'][cases[i]['M']-1]) &&
-	    (req.body[i][1] === cases[i]['arr'][(parseInt(cases[i]['arr'].length) - cases[i]['M'])])
-	){
-	    checks = checks + ' case ' + (parseInt(i)+1) + ' passed - ';
-	} else {
-	    checks = checks + ' case ' + (parseInt(i)+1) + ' failed - ';
-	}
+            (answers[i][0] === caseGroups[caseNumber][i]['arr'][caseGroups[caseNumber][i]['M']-1]) &&
+            (answers[i][1] === caseGroups[caseNumber][i]['arr'][(parseInt(caseGroups[caseNumber][i]['arr'].length) - caseGroups[caseNumber][i]['M'])])
+        ) {
+            checks = checks + ' case ' + (parseInt(i)+1) + ' passed - ';
+        } else {
+            checks = checks + ' case ' + (parseInt(i)+1) + ' failed - ';
+        }
     }
 
     res.send(checks);
