@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8"> 
+    <title></title> 
+</head>
+
+ <body>  
+    <iframe id="content" style="width:90%" src="http://league.chat/iframe.html"></iframe>
+
+    <script>
+        window.addEventListener('message', function(e) {
+            document.getElementById('content').height = e.data;
+        });
+    </script>
+  </body>
+ </html>
