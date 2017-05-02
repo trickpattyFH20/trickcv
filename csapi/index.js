@@ -20,8 +20,8 @@ router.get('/prime/factors/:num', function(req, res) {
             divisor = 2;
 
             while(n>2){
-                if(n % divisor == 0){
-                    if (factors.indexOf(divisor) == -1) {
+                if(n % divisor === 0){
+                    if (factors.indexOf(divisor) === -1) {
                         factors.push(divisor);
                     }
                     n= n/ divisor;
@@ -68,7 +68,7 @@ router.get('/prime/:num', function(req, res) {
             //loop from 2 to the number and test modulus
             while (n > divisor){
                 //if remainder is zero its not prime
-                if(n % divisor == 0){
+                if(n % divisor === 0){
                     return false;
                 }else{
                     divisor++;
