@@ -62,4 +62,8 @@ export class AboutComponent implements OnInit {
         this.player.loadPlaylist({'list':'FLzULymNZwMkZqaaNIFcp3fQ'});
         this.player.mute();
     }
+  
+    ngOnInit() {
+        // TODO
+    }
 }
