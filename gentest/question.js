@@ -1,29 +1,47 @@
 /*
 	GENERATOR CHALLENGE
-  
-	write a function "findGenIndices()" that takes one argument "generator"
-  
-  "generator" is an ES6 generator function, yielding a random number of integers
-  
-  findGenIndices() should return an array, with the first item being the 
-  second value yielded by the generator, and the next item being the second to last
-  value yielded by the generator
-  
-  -------
-  ES6 generator 101:
-  
-  calling generator.next() will output an object with the following structure:
-  {value: any, done: boolean}
-  
-  each consecutive call of generator.next() will return a new item yielded by the generator
-  
+
+  <h4> ES6 generator tips: </h4>
+
+  function* generator(i) {
+    yield 'foo';
+    yield 'bar';
+    yield 'baz';
+  }
+
+  calling generator.next() will return an object with the following structure:
+
+  {
+    value: any,
+    done: boolean
+  }
+
+  each time generator.next() is called it will return the next item yielded by the generator
+
+  --------------------------------------------------------------
+
+  <h4> Challenge: </h4>
+
+  - write a function called "findGenIndices(generator, n)" that takes two arguments "generator" and "n"
+
+  - "generator" is an ES6 generator function that will yield an unknown number of times
+
+  - findGenIndices() should return an array of two values.
+    The first item in the returned array should be the "nth" value returned by the generator.
+    The second item in the returned array should be the item returned "n" iterations before the generator completes
+
+  - assume that that "n" is always less than or equal to the number of times the generator will yield
+
+
+  --------------------------------------------------------------
+
 */
 
 ///////////////////////////////////////////
 // answer below this line
 
 function findGenIndices(generator) {
-	
+
 }
 
 
@@ -31,7 +49,7 @@ function findGenIndices(generator) {
 ///////////////////////////////////////////
 
 let xmlGet = new XMLHttpRequest();
-xmlGet.onreadystatechange = () => { 
+xmlGet.onreadystatechange = () => {
   if (xmlGet.readyState == 4 && xmlGet.status == 200){
     let cases = JSON.parse(xmlGet.responseText),
     		answers = [];

@@ -10,7 +10,10 @@ let express = require('express'),
             {M: 2, arr: [1, 3, 5, 12]},
             {M: 4, arr: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]},
             {M: 2, arr: [1, 3, 3, 7]},
-            {M: 2, arr: ['a', 'b', 'c', 'd', 'e', 'f', 'g']}
+            {M: 4, arr: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']},
+            {M: 1, arr: ['xyz', 'abc', 321, 'def', 678]},
+            {M: 2, arr: ['1a', '2b', '3c', '4d', '5e']},
+            {M: 3, arr: [1337, 8888, 8443, 3000, 8080, 8443, 5555]}
         ],
         [
             {M: 2, arr: [1337, 8888, 1234]},
@@ -23,7 +26,7 @@ let express = require('express'),
             {M: 2, arr: ['a', 'b', 'c', 'd', 'e', 'f', 'g']},
             {M: 3, arr: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]},
             {M: 2, arr: [1, 3, 3, 7]},
-            {M: 1, arr: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']}
+            {M: 4, arr: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']}
         ]
     ];
 
@@ -39,7 +42,8 @@ router.get('/', function(req, res) {
     let rollCase = Math.floor(Math.random() * 3)
     let caseInfo = {
         caseNumber: rollCase,
-        cases: caseGroups[rollCase]
+        cases: caseGroups[0],
+        // cases: caseGroups[rollCase]
     }
     res.json(caseInfo);
 });

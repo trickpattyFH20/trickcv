@@ -8,27 +8,44 @@
 <h3>Generator Challenge</h3>
 
 <pre>
-    write a function "findGenIndices()" that takes two arguments "generator" and "M"
+    <h4> ES6 generator tips: </h4>
 
-    "generator" is an ES6 generator function that will yield "N" times
-    before the generator completes
-
-    findGenIndices() should return an array.
-
-    The first item in the returned array should be the "Mth" value returned by the generator.
-    The second item in the returned array should be the value returned by the
-    generator "M" iterations before the generator completes.
-    --------------------------------------------------------------
-    ES6 generator 101:
+    function* generator(i) {
+      yield 'foo';
+      yield 'bar';
+      yield 'baz';
+    }
 
     calling generator.next() will return an object with the following structure:
-    {value: any, done: boolean}
 
-    each time generator.next() is called it will return the next item in the generator
+    {
+      value: any,
+      done: boolean
+    }
+
+    each time generator.next() is called it will return the next item yielded by the generator
+
+    --------------------------------------------------------------
+
+    <h4> Challenge: </h4>
+
+    - write a function called "findGenIndices(generator, n)" that takes two arguments "generator" and "n"
+
+    - "generator" is an ES6 generator function that will yield an unknown number of times
+
+    - findGenIndices() should return an array of two values.
+      The first item in the returned array should be the "nth" value returned by the generator.
+      The second item in the returned array should be the item returned "n" iterations before the generator completes
+
+    - assume that that "n" is always less than or equal to the number of times the generator will yield
+
+
+    --------------------------------------------------------------
+
 </pre>
 
-<!--<iframe style="width: 100%; height: 600px" src="https://embed.plnkr.co/gb81L8IDCw5TYqwzOvE8/" frameborder="0" allowfullscren="allowfullscren"></iframe>-->
-<script async src="//jsfiddle.net/trickpatty/h11oashL/15/embed/js/"></script>
+<p data-height="204" data-theme-id="0" data-slug-hash="odPEqW" data-default-tab="js" data-user="trickpatty" data-embed-version="2" data-pen-title="odPEqW" class="codepen">See the Pen <a href="https://codepen.io/trickpatty/pen/odPEqW/">odPEqW</a> by Patrick Lawler (<a href="https://codepen.io/trickpatty">@trickpatty</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 </body>
 </html>
