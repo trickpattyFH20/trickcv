@@ -27,8 +27,8 @@
   - "generator" is an ES6 generator function that will yield an unknown number of times
 
   - findGenIndices() should return an array of two values.
-    The first item in the returned array should be the "nth" value returned by the generator.
-    The second item in the returned array should be the item returned "n" iterations before the generator completes
+    The first item in the returned array should be the "nth" value yielded by the generator.
+    The second item in the returned array should be the item yielded "n" iterations before the generator completes
 
   - assume that that "n" is always less than or equal to the number of times the generator will yield
 
